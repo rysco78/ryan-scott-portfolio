@@ -13,7 +13,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'Ryan R. Scott | Product & Marketing Leader',
   description:
-    '18+ years building data-driven platforms in regulated industries. VP Product Management at GM Financial. Dallas, TX.',
+    'Personal site of Ryan R. Scott — product & growth executive with 18+ years in FinTech and regulated industries. Explore his experience, work, and expertise at Fortune 500 scale.',
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Ryan R. Scott | Product & Marketing Leader',
-    description: '18+ years building data-driven platforms in regulated industries.',
+    description: 'Personal site of Ryan R. Scott — product & growth executive with 18+ years in FinTech and regulated industries. Explore his experience, work, and expertise at Fortune 500 scale.',
     type: 'website',
   },
 };
