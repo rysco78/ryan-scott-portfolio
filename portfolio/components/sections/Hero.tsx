@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { MapPin, Map, ShieldCheck, BarChart2, Users, Cloud, TrendingUp, type LucideIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { competencies } from '@/lib/data';
@@ -20,12 +19,11 @@ export function Hero() {
             className="flex-shrink-0 flex flex-col items-center gap-2"
           >
             <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-accent/40 shadow-2xl shadow-accent/10">
-              <Image
-                src="/ryan-scott.jpg"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/ryan-scott.jpg`}
                 alt="Ryan R. Scott"
-                fill
-                className="object-cover object-top"
-                priority
+                className="object-cover object-top w-full h-full"
               />
             </div>
             <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
