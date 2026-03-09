@@ -21,7 +21,7 @@ export function Hero() {
             <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-accent/40 shadow-2xl shadow-accent/10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/ryan-scott.jpg`}
+                src="/ryan-scott.jpg"
                 alt="Ryan R. Scott"
                 className="object-cover object-top w-full h-full"
               />
