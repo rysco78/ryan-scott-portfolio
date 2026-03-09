@@ -11,11 +11,11 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Ryan R. Scott — VP Product Strategy',
+  title: 'Ryan R. Scott | Product & Marketing Leader',
   description:
     '18+ years building data-driven platforms in regulated industries. VP Product Management at GM Financial. Dallas, TX.',
   openGraph: {
-    title: 'Ryan R. Scott — VP Product Strategy',
+    title: 'Ryan R. Scott | Product & Marketing Leader',
     description: '18+ years building data-driven platforms in regulated industries.',
     type: 'website',
   },
