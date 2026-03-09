@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  basePath: '/ryan-scott-portfolio',
   images: {
-    domains: [],
+    unoptimized: true,
   },
 };
 
