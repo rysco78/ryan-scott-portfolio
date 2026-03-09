@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { MapPin, ArrowDown, Map, ShieldCheck, BarChart2, Users, Cloud, TrendingUp, type LucideIcon } from 'lucide-react';
+import { MapPin, Map, ShieldCheck, BarChart2, Users, Cloud, TrendingUp, type LucideIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { competencies } from '@/lib/data';
 
@@ -83,15 +83,6 @@ export function Hero() {
           })}
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-muted-foreground"
-        >
-          <ArrowDown size={16} className="animate-bounce" />
-        </motion.div>
       </div>
     </section>
   );
