@@ -15,11 +15,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-    const stored = localStorage.getItem('theme') as Theme | null;
-    if (stored) {
-      setTheme(stored);
-      document.documentElement.classList.toggle('light', stored === 'light');
-    }
+    localStorage.removeItem('theme');
   }, []);
 
   const toggle = () => {
