@@ -42,3 +42,5 @@ The background (`components/layout/ParallaxGradientBackground.tsx`) follows the 
 - Icons: `lucide-react` only
 - Animations: `framer-motion` — scroll fade-ins use `SectionFade` (`components/ui/SectionFade.tsx`)
 - `suppressHydrationWarning` is set on `<html>` to suppress the theme class flash
+- Use `<img>` tags directly (not `next/image`) — static export disables Next.js image optimization
+- `CityscapeBackground.tsx` and `MeshWaveBackground.tsx` exist in `components/layout/` but are unused

@@ -33,7 +33,7 @@ export function Contact() {
             <p className="text-xs font-semibold tracking-widest text-accent uppercase mb-3">
               Contact
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl mb-4">Let&apos;s Talk Product (Or Vinyl).</h2>
+            <h2 className="font-serif text-4xl md:text-5xl mb-4">Let&apos;s Talk Product (Or Vinyl)</h2>
             <p className="text-base md:text-lg text-muted-foreground mb-10 leading-relaxed">
               Open to connections, advisory roles, and strategic conversations.
             </p>
