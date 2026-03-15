@@ -2,7 +2,7 @@ import { Linkedin, Github, Mail, Phone } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="border-t border-border py-8 mt-24 bg-card">
+    <footer className="border-t border-border py-8 bg-card">
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-muted-foreground">
           © 2026 Ryan R. Scott | All Rights Reserved
