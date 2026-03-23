@@ -1,5 +1,5 @@
 import { SectionFade } from '@/components/ui/SectionFade';
-import { Mail, Linkedin, Github, MapPin, Phone, Disc3 } from 'lucide-react';
+import { Mail, Linkedin, Github, Phone } from 'lucide-react';
 
 const contactLinks = [
   {
@@ -33,12 +33,12 @@ export function Contact() {
             <p className="text-xs font-semibold tracking-widest text-accent uppercase mb-3">
               Contact
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl mb-4">Let&apos;s Talk Product (Or Vinyl)</h2>
+            <h2 className="font-serif text-4xl md:text-5xl mb-4">Let&apos;s Talk Product</h2>
             <p className="text-base md:text-lg text-muted-foreground mb-10 leading-relaxed">
               Open to connections, advisory roles, and strategic conversations.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {contactLinks.map((link) => {
                 const Icon = link.icon;
                 return (
@@ -47,38 +47,17 @@ export function Contact() {
                     href={link.href}
                     target={link.href.startsWith('mailto') ? '_self' : '_blank'}
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-4 p-4 rounded-lg border border-border hover:border-accent/40 bg-card hover:-translate-y-0.5 transition-all duration-200"
+                    className="group flex items-center gap-3 p-4 rounded-lg border border-border hover:border-accent/40 bg-card hover:-translate-y-0.5 transition-all duration-200"
                   >
-                    <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center flex-shrink-0 group-hover:bg-accent/10 transition-colors">
-                      <Icon size={18} className="text-accent" />
+                    <div className="w-9 h-9 rounded-full bg-muted flex items-center justify-center flex-shrink-0 group-hover:bg-accent/10 transition-colors">
+                      <Icon size={16} className="text-accent" />
                     </div>
-                    <span className="text-sm font-medium group-hover:text-accent transition-colors">
+                    <span className="text-sm font-medium group-hover:text-accent transition-colors truncate">
                       {link.label}
                     </span>
                   </a>
                 );
               })}
-
-              <a
-                href="https://vinyl.ryanrscott.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-4 p-4 rounded-lg border border-border hover:border-accent/40 bg-card hover:-translate-y-0.5 transition-all duration-200"
-              >
-                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center flex-shrink-0 group-hover:bg-accent/10 transition-colors">
-                  <Disc3 size={18} className="text-accent" />
-                </div>
-                <span className="text-sm font-medium group-hover:text-accent transition-colors">
-                  Ryan&apos;s Record Collection
-                </span>
-              </a>
-
-              <div className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card">
-                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
-                  <MapPin size={18} className="text-accent" />
-                </div>
-                <span className="text-sm font-medium text-muted-foreground">Dallas, Texas</span>
-              </div>
             </div>
           </div>
         </SectionFade>

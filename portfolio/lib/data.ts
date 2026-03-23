@@ -1,4 +1,4 @@
-import type { Experience, Project, Competency } from '@/types';
+import type { Experience, Project, Competency, Certification, HobbyProject } from '@/types';
 
 export const competencies: Competency[] = [
   { label: 'Product Strategy & Roadmapping', descriptor: 'Multi-year portfolio planning tied to business outcomes', icon: 'Map' },
@@ -84,6 +84,29 @@ export const experiences: Experience[] = [
   },
 ];
 
+export const certifications: Certification[] = [
+  {
+    name: 'Google AI Professional',
+    issuer: 'Google',
+    badge: '/badge-google-ai-professional.png',
+  },
+  {
+    name: 'Salesforce Certified Agentforce Specialist',
+    issuer: 'Salesforce',
+    badge: '/badge-sf-agentforce.png',
+  },
+  {
+    name: 'Agentblazer Legend 2026',
+    issuer: 'Trailhead by Salesforce',
+    badge: '/badge-agentblazer-legend.png',
+  },
+  {
+    name: 'Six Sigma Green Belt',
+    issuer: 'The Council for Six Sigma Certification (CSSC)',
+    badge: '/badge-six-sigma-green-belt.png',
+  },
+];
+
 export const projects: Project[] = [
   {
     number: '01',
@@ -124,5 +147,63 @@ export const projects: Project[] = [
       "Led scaling efforts for Santander's direct-to-consumer loan originations program, RoadLoans. Led platform evolution, customer experience improvements, and acquisition growth in a regulated financial services environment. Also managed integrated partnerships with large vendors including Cars.com, AutoTrader, Kelly Blue Book, CarMax, and LendingTree.",
     status: 'Legacy',
     tags: ['Scaling', 'Conversion Optimization', 'Media Planning', 'Partnerships', 'Loan Originations', 'Product Portfolio Management', 'P&L Ownership', 'Data-driven Decision Making', 'Digital Commerce Platforms'],
+  },
+];
+
+export const hobbyProjects: HobbyProject[] = [
+  {
+    id: 'resume-tailor',
+    name: 'Resume Tailor',
+    description: 'AI-powered resume rewriter that rewrites your resume to maximize ATS keyword match for a specific job posting — and retries until it scores ≥ 80%.',
+    tags: ['AI', 'Next.js', 'AWS Bedrock', 'Claude Sonnet 4', 'Supabase', 'Clerk'],
+    detail: 'Most resumes are filtered out by ATS software before a human ever reads them. Resume Tailor solves this by parsing your existing resume (DOCX, PDF, or TXT), analyzing the job description you paste in, and using Claude AI to rewrite it with the job\'s exact keywords — without changing your job titles, companies, or dates. It scores the result against the job description and retries up to three times until it hits ≥ 80% ATS match. Signed-in users can save tailored resumes and return later to re-download. Generated DOCX files are stored in S3 and delivered via pre-signed URLs — nothing is stored on the server.',
+    techStack: [
+      { layer: 'Framework', tech: 'Next.js 16 (App Router)' },
+      { layer: 'Language', tech: 'TypeScript' },
+      { layer: 'AI', tech: 'Claude Sonnet 4 via AWS Bedrock' },
+      { layer: 'Auth', tech: 'Clerk (Google OAuth + email)' },
+      { layer: 'Database', tech: 'Supabase (PostgreSQL)' },
+      { layer: 'File Storage', tech: 'Amazon S3 (pre-signed URLs)' },
+      { layer: 'DOCX Generation', tech: 'docx npm package' },
+      { layer: 'Resume Parsing', tech: 'mammoth (DOCX), pdf-parse v1 (PDF)' },
+      { layer: 'Styling', tech: 'Tailwind CSS v4' },
+      { layer: 'Hosting', tech: 'Vercel' },
+    ],
+    githubUrl: 'https://github.com/rysco78/resume-prep',
+    prodUrl: 'https://resume.ryanrscott.com',
+  },
+  {
+    id: 'record-collection',
+    name: 'Vinyl Collection',
+    description: 'A personal vinyl record catalog with card and list views, real-time search, sorting by artist/title/genre/year, and dark/light mode.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages', 'No-framework'],
+    detail: 'A single-file HTML/CSS/JS app — no build step, no dependencies, no framework. The full collection is stored as a JavaScript array inside index.html and rendered client-side. Album art is served locally from the /img/ directory via GitHub Pages. Features include a card grid view and a compact list view, real-time search across artist, title, genre, and year, grouping by artist/genre/year, and sorting in any direction. A Python script (download_art.py) pulls cover art in bulk from MusicBrainz and the Cover Art Archive.',
+    techStack: [
+      { layer: 'Frontend', tech: 'Vanilla HTML / CSS / JavaScript' },
+      { layer: 'Hosting', tech: 'GitHub Pages' },
+      { layer: 'Data', tech: 'Inline JS array (no database)' },
+      { layer: 'Art Sourcing', tech: 'Python + MusicBrainz / Cover Art Archive' },
+    ],
+    githubUrl: 'https://github.com/rysco78/record-collection',
+    prodUrl: 'https://vinyl.ryanrscott.com',
+  },
+  {
+    id: 'portfolio',
+    name: "Ryan's Personal Portfolio",
+    description: 'The site you\'re on right now — a statically exported Next.js portfolio with Tailwind CSS v4, Framer Motion animations, and automatic deployment to GitHub Pages.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS v4', 'Framer Motion', 'GitHub Pages'],
+    detail: 'Built from scratch with Claude Code as a static Next.js site deployed to GitHub Pages via a GitHub Actions workflow on every push to master. Uses Tailwind CSS v4 with all theme config living in globals.css (no tailwind.config.ts). Dark mode is the default and is implemented entirely through CSS custom properties toggled by a .light class — no dark: utility classes anywhere. A custom ThemeProvider persists the user\'s preference to localStorage. Framer Motion handles scroll fade-in animations via a reusable SectionFade wrapper. All site content lives in lib/data.ts as typed constants, keeping components clean and content easy to update.',
+    techStack: [
+      { layer: 'Framework', tech: 'Next.js 16 (App Router, static export)' },
+      { layer: 'Language', tech: 'TypeScript (strict)' },
+      { layer: 'Styling', tech: 'Tailwind CSS v4 + CSS custom properties' },
+      { layer: 'Animations', tech: 'Framer Motion' },
+      { layer: 'Icons', tech: 'lucide-react' },
+      { layer: 'Fonts', tech: 'DM Serif Display + Plus Jakarta Sans (next/font)' },
+      { layer: 'Hosting', tech: 'GitHub Pages' },
+      { layer: 'CI/CD', tech: 'GitHub Actions' },
+    ],
+    githubUrl: 'https://github.com/rysco78/ryan-scott-portfolio',
+    prodUrl: 'https://www.ryanrscott.com',
   },
 ];

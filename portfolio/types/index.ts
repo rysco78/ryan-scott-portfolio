@@ -21,3 +21,20 @@ export interface Competency {
   descriptor: string;
   icon: string;
 }
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  badge: string;
+}
+
+export interface HobbyProject {
+  id: string;
+  name: string;
+  description: string;
+  tags: string[];
+  detail: string;
+  techStack: { layer: string; tech: string }[];
+  githubUrl: string;
+  prodUrl?: string;
+}
