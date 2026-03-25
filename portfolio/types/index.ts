@@ -36,5 +36,6 @@ export interface HobbyProject {
   detail: string;
   techStack: { layer: string; tech: string }[];
   githubUrl: string;
+  readmeUrl?: string;
   prodUrl?: string;
 }

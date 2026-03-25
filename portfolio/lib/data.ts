@@ -154,7 +154,7 @@ export const hobbyProjects: HobbyProject[] = [
   {
     id: 'resume-tailor',
     name: 'Resume Tailor',
-    description: 'AI-powered resume rewriter that rewrites your resume to maximize ATS keyword match for a specific job posting — and retries until it scores ≥ 80%.',
+    description: 'Most resumes never reach a human — ATS software filters them first. Resume Tailor rewrites your resume against a specific job posting using Claude AI, targeting the exact keywords recruiters and ATS systems are scanning for, and retrying automatically until it hits a ≥ 80% match score.',
     tags: ['AI', 'Next.js', 'AWS Bedrock', 'Claude Sonnet 4', 'Supabase', 'Clerk'],
     detail: 'Most resumes are filtered out by ATS software before a human ever reads them. Resume Tailor solves this by parsing your existing resume (DOCX, PDF, or TXT), analyzing the job description you paste in, and using Claude AI to rewrite it with the job\'s exact keywords — without changing your job titles, companies, or dates. It scores the result against the job description and retries up to three times until it hits ≥ 80% ATS match. Signed-in users can save tailored resumes and return later to re-download. Generated DOCX files are stored in S3 and delivered via pre-signed URLs — nothing is stored on the server.',
     techStack: [
@@ -170,12 +170,13 @@ export const hobbyProjects: HobbyProject[] = [
       { layer: 'Hosting', tech: 'Vercel' },
     ],
     githubUrl: 'https://github.com/rysco78/resume-prep',
+    readmeUrl: 'https://github.com/rysco78/resume-prep/blob/main/README.md',
     prodUrl: 'https://resume.ryanrscott.com',
   },
   {
     id: 'record-collection',
     name: 'Vinyl Collection',
-    description: 'A personal vinyl record catalog with card and list views, real-time search, sorting by artist/title/genre/year, and dark/light mode.',
+    description: 'A shareable catalog for my personal vinyl record collection — built intentionally without any framework or build step to prove that a polished, fully functional app can ship as a single HTML file. Search, sort, and browse the full collection with cover art pulled from MusicBrainz.',
     tags: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages', 'No-framework'],
     detail: 'A single-file HTML/CSS/JS app — no build step, no dependencies, no framework. The full collection is stored as a JavaScript array inside index.html and rendered client-side. Album art is served locally from the /img/ directory via GitHub Pages. Features include a card grid view and a compact list view, real-time search across artist, title, genre, and year, grouping by artist/genre/year, and sorting in any direction. A Python script (download_art.py) pulls cover art in bulk from MusicBrainz and the Cover Art Archive.',
     techStack: [
@@ -185,12 +186,13 @@ export const hobbyProjects: HobbyProject[] = [
       { layer: 'Art Sourcing', tech: 'Python + MusicBrainz / Cover Art Archive' },
     ],
     githubUrl: 'https://github.com/rysco78/record-collection',
+    readmeUrl: 'https://github.com/rysco78/record-collection/blob/master/README.md',
     prodUrl: 'https://vinyl.ryanrscott.com',
   },
   {
     id: 'portfolio',
     name: "Ryan's Personal Portfolio",
-    description: 'The site you\'re on right now — a statically exported Next.js portfolio with Tailwind CSS v4, Framer Motion animations, and automatic deployment to GitHub Pages.',
+    description: "This site — built to practice modern frontend development outside of work and serve as a living resume. The goal was a fast, polished static site that deploys automatically, with no compromises on design quality despite being built entirely with Claude Code.",
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS v4', 'Framer Motion', 'GitHub Pages'],
     detail: 'Built from scratch with Claude Code as a static Next.js site deployed to GitHub Pages via a GitHub Actions workflow on every push to master. Uses Tailwind CSS v4 with all theme config living in globals.css (no tailwind.config.ts). Dark mode is the default and is implemented entirely through CSS custom properties toggled by a .light class — no dark: utility classes anywhere. A custom ThemeProvider persists the user\'s preference to localStorage. Framer Motion handles scroll fade-in animations via a reusable SectionFade wrapper. All site content lives in lib/data.ts as typed constants, keeping components clean and content easy to update.',
     techStack: [
@@ -204,6 +206,7 @@ export const hobbyProjects: HobbyProject[] = [
       { layer: 'CI/CD', tech: 'GitHub Actions' },
     ],
     githubUrl: 'https://github.com/rysco78/ryan-scott-portfolio',
+    readmeUrl: 'https://github.com/rysco78/ryan-scott-portfolio/blob/master/README.md',
     prodUrl: 'https://www.ryanrscott.com',
   },
 ];

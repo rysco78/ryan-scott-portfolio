@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { X, Github, ExternalLink } from 'lucide-react';
+import { X, Github, ExternalLink, BookOpen } from 'lucide-react';
 import { SectionFade } from '@/components/ui/SectionFade';
 import { Tag } from '@/components/ui/Tag';
 import { hobbyProjects } from '@/lib/data';
@@ -86,6 +86,17 @@ function ProjectModal({ project, onClose }: { project: HobbyProject; onClose: ()
               <Github size={15} />
               View on GitHub
             </a>
+            {project.readmeUrl && (
+              <a
+                href={project.readmeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-accent/60 bg-muted hover:bg-accent/10 text-sm font-medium transition-all duration-200 hover:text-accent"
+              >
+                <BookOpen size={15} />
+                README
+              </a>
+            )}
             {project.prodUrl && (
               <a
                 href={project.prodUrl}
