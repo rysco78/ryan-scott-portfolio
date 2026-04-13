@@ -174,6 +174,22 @@ export const hobbyProjects: HobbyProject[] = [
     prodUrl: 'https://resume.ryanrscott.com',
   },
   {
+    id: 'agent-co-financial',
+    name: 'Agent Co. Financial',
+    description: 'Portfolio site for a 12-agent AI team that designs and builds regulated digital financial products for the automotive lending industry — complete with orchestration model, mandatory compliance gates, and an active project: a soft-pull prequalification and lead generation platform for Toyota and Lexus franchise dealers.',
+    tags: ['AI Agents', 'Claude AI', 'Automotive Finance', 'HTML', 'GitHub Pages', 'No-framework'],
+    detail: 'Agent Co. Financial is a 12-agent AI team organized into a Core Delivery Team and a Specialist SME Team (Legal, Finance, Credit & Risk, Cybersecurity, Analytics, CX, Marketing). The portfolio site documents the orchestration model, mandatory compliance gates, and the active project — the Auto Leads Platform. The platform is a consumer-facing prequalification flow where buyers complete a soft-pull prequal and approved outcomes are delivered as ADF leads to Toyota and Lexus franchise dealers via DealerTrack and RouteOne. The site itself is a single-file static app (no build step, no framework) with client-side markdown rendering via marked.js, hosted on GitHub Pages with a custom domain.',
+    techStack: [
+      { layer: 'Frontend', tech: 'Vanilla HTML / CSS / JavaScript' },
+      { layer: 'Markdown Rendering', tech: 'marked.js (CDN)' },
+      { layer: 'Hosting', tech: 'GitHub Pages' },
+      { layer: 'AI Team', tech: '12-agent Claude AI orchestration' },
+    ],
+    githubUrl: 'https://github.com/rysco78/agent-co-portfolio',
+    readmeUrl: 'https://github.com/rysco78/agent-co-portfolio/blob/master/README.md',
+    prodUrl: 'https://agents.ryanrscott.com',
+  },
+  {
     id: 'record-collection',
     name: 'Vinyl Collection',
     description: 'A shareable catalog for my personal vinyl record collection — built intentionally without any framework or build step to prove that a polished, fully functional app can ship as a single HTML file. Search, sort, and browse the full collection with cover art pulled from MusicBrainz.',
