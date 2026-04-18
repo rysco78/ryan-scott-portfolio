@@ -17,7 +17,7 @@ const MONTHS: Record<string, number> = {
 };
 
 function parseDate(str: string): Date {
-  if (str.trim() === 'Present') return new Date(2026, 2, 1); // Mar 2026
+  if (str.trim() === 'Present') return new Date();
   const [mon, year] = str.trim().split(' ');
   return new Date(parseInt(year), MONTHS[mon], 1);
 }
