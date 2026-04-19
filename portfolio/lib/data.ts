@@ -190,6 +190,21 @@ export const hobbyProjects: HobbyProject[] = [
     prodUrl: 'https://agents.ryanrscott.com',
   },
   {
+    id: 'tori-ford',
+    name: 'Tori Ford — Author Site',
+    description: 'A single-page author website for Tori Ford, a romance novelist. Built intentionally without any framework, build step, or JavaScript — pure HTML and CSS in one file, with a custom book cover rendered entirely in CSS and a layout designed around a float-based text-wrap effect.',
+    tags: ['HTML', 'CSS', 'GitHub Pages', 'No-framework', 'No-JavaScript'],
+    detail: 'A fully static author site for romance novelist Tori Ford, built as a single index.html file with all CSS embedded in the head. No JavaScript, no build step, no dependencies. The book cover is rendered entirely in CSS and HTML — not an image tag — with the cover title and author photo layered via absolute positioning. Layout uses a classic float-based design so the blurb text wraps naturally around the book cover, intentionally avoiding flexbox or grid to preserve that effect. All colors are defined as CSS custom properties at :root. Responsive at 680px — the float clears and the layout stacks for mobile.',
+    techStack: [
+      { layer: 'Frontend', tech: 'Vanilla HTML / CSS (no JavaScript)' },
+      { layer: 'Fonts', tech: 'Google Fonts (Outfit, Notable, Homemade Apple)' },
+      { layer: 'Hosting', tech: 'GitHub Pages' },
+    ],
+    githubUrl: 'https://github.com/rysco78/tori-ford',
+    readmeUrl: 'https://github.com/rysco78/tori-ford/blob/master/CLAUDE.md',
+    prodUrl: 'https://www.heytoriford.com',
+  },
+  {
     id: 'record-collection',
     name: 'Vinyl Collection',
     description: 'A shareable catalog for my personal vinyl record collection — built intentionally without any framework or build step to prove that a polished, fully functional app can ship as a single HTML file. Search, sort, and browse the full collection with cover art pulled from MusicBrainz.',
