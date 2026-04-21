@@ -190,6 +190,23 @@ export const hobbyProjects: HobbyProject[] = [
     prodUrl: 'https://agents.ryanrscott.com',
   },
   {
+    id: 'energy-plan-optimizer',
+    name: 'Energy Plan Optimizer',
+    description: 'A Texas electricity plan optimizer that analyzes your actual usage history and recommends the best available plan for your home. Upload your PDF bill and Green Button data from Smart Meter Texas, explore your consumption patterns, and let Claude AI pick the plan that will save you the most money.',
+    tags: ['AI', 'Python', 'FastAPI', 'AWS Bedrock', 'Claude Sonnet', 'DynamoDB', 'Auth0', 'Chart.js'],
+    detail: 'Walks through four steps: upload a PDF electricity bill (ESI ID and meter number extracted automatically via Claude AI), upload a Green Button XML from Smart Meter Texas for a full monthly breakdown with day/night split and hourly heatmap, browse ranked plans fetched live from the Power to Choose registry sorted by estimated monthly cost at your actual usage level, and get a Claude Sonnet recommendation that analyzes your usage profile and picks the single best plan with reasoning. Sign in with Auth0 to save your session and resume without re-uploading. Backend is Python/FastAPI; frontend is vanilla JS with Chart.js; sessions persist to AWS DynamoDB; AI runs via Claude Sonnet on AWS Bedrock.',
+    techStack: [
+      { layer: 'Backend', tech: 'Python · FastAPI · Uvicorn' },
+      { layer: 'Frontend', tech: 'Vanilla JavaScript · Chart.js' },
+      { layer: 'AI', tech: 'Claude Sonnet via AWS Bedrock' },
+      { layer: 'Auth', tech: 'Auth0 (SPA JS)' },
+      { layer: 'Database', tech: 'AWS DynamoDB' },
+      { layer: 'Data Source', tech: 'Power to Choose API · Smart Meter Texas Green Button XML' },
+    ],
+    githubUrl: 'https://github.com/rysco78/electricity-usage',
+    readmeUrl: 'https://github.com/rysco78/electricity-usage/blob/master/README.md',
+  },
+  {
     id: 'tori-ford',
     name: 'Tori Ford — Author Site',
     description: 'A single-page author website for Tori Ford, a romance novelist. Built intentionally without any framework, build step, or JavaScript — pure HTML and CSS in one file, with a custom book cover rendered entirely in CSS and a layout designed around a float-based text-wrap effect.',
