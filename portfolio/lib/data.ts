@@ -205,6 +205,7 @@ export const hobbyProjects: HobbyProject[] = [
     ],
     githubUrl: 'https://github.com/rysco78/electricity-usage',
     readmeUrl: 'https://github.com/rysco78/electricity-usage/blob/master/README.md',
+    prodUrl: 'https://energy.ryanrscott.com',
   },
   {
     id: 'tori-ford',
