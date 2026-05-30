@@ -105,6 +105,21 @@ export const certifications: Certification[] = [
     issuer: 'The Council for Six Sigma Certification (CSSC)',
     badge: '/badge-six-sigma-green-belt.png',
   },
+  {
+    name: 'AI in ABM Certification',
+    issuer: 'Demandbase',
+    badge: '/badge-demandbase-ai-abm.png',
+  },
+  {
+    name: 'Snowflake University Platform Certification',
+    issuer: 'Snowflake',
+    badge: '/badge-snowflake-platform-skills.png',
+  },
+  {
+    name: 'Sales Enablement Certification',
+    issuer: 'HubSpot',
+    badge: '/badge-hubspot-sales-enablement.png',
+  },
 ];
 
 export const projects: Project[] = [
