@@ -111,6 +111,11 @@ export const certifications: Certification[] = [
     badge: '/badge-demandbase-ai-abm.png',
   },
   {
+    name: 'Account-Based GTM Certification',
+    issuer: 'Demandbase',
+    badge: '/badge-demandbase-abm-gtm.png',
+  },
+  {
     name: 'Snowflake University Platform Certification',
     issuer: 'Snowflake',
     badge: '/badge-snowflake-platform-skills.png',
